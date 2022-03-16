@@ -79,10 +79,7 @@ int main() {
     auto filter_data = gen.generate_spiked(data_size, 10, 10, 0.1);
     auto const data_count = data_size >> 3;
     BENCHMARK(query_scalar<uint64_t>, BENCHMARK_PARAMETERS("filter_data", filter_data, "aggregation_data", agg_data, "element_count", data_count, "predicate", 10), BENCHMARK_SPECS("selectivity", sel));
-//    _mm_free( filter_data );
   }
-//  WOLO([](){std::cout << "Hello";});
-//  std::cout << y << "\n";
   return 0;
 
 }
